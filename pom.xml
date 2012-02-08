@@ -13,9 +13,10 @@
     <name>jc-spectrum</name>
 
     <dependencies>
-        <dependency>
+       <dependency>
             <groupId>cml</groupId>
             <artifactId>jc-top-core</artifactId>
+            <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>org.jcamp</groupId>
@@ -29,7 +30,8 @@
         </dependency>
         <dependency>
             <groupId>cml</groupId>
-            <artifactId>jc-testutils</artifactId>
+            <artifactId>jc-top-testutils</artifactId>
+            <version>${project.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>

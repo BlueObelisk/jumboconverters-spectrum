@@ -9,7 +9,7 @@ import org.apache.log4j.Logger;
 import org.xmlcml.cml.converters.AbstractConverter;
 import org.xmlcml.cml.converters.MimeType;
 import org.xmlcml.cml.converters.cml.CMLCommon;
-import org.xmlcml.cml.converters.spectrum.SpectrumCommon;
+import org.xmlcml.cml.converters.spectrum.SpectrumModule;
 import org.xmlcml.cml.converters.spectrum.jdx.jdx2cml.JDX2CMLParser;
 import org.xmlcml.cml.element.CMLCml;
 import org.xmlcml.cml.element.CMLSpectrum;
@@ -46,7 +46,7 @@ public class Bruker2XMLConverter extends AbstractConverter {
 	}
 
 	public MimeType getInputType() {
-		return SpectrumCommon.BRUKER_JDX_TYPE;
+		return SpectrumModule.BRUKER_JDX_TYPE;
 	}
 	
 	public MimeType getOutputType() {

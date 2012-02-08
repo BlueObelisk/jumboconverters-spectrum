@@ -21,8 +21,13 @@
         </dependency>
         <dependency>
             <groupId>cml</groupId>
+            <artifactId>jc-spectrum</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>cml</groupId>
             <artifactId>jc-top-core</artifactId>
-            <version>0.3-SNAPSHOT</version>
+            <version>${project.version}</version>
         </dependency>
 
         <dependency>

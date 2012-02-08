@@ -5,7 +5,7 @@
 package org.xmlcml.cml.converters.spectrum.jdx.cml2jdx;
 
 import org.junit.Test;
-import org.xmlcml.cml.converters.spectrum.SpectrumCommon;
+import org.xmlcml.cml.converters.spectrum.SpectrumModule;
 import org.xmlcml.cml.converters.testutils.RegressionSuite;
 
 /**
@@ -16,7 +16,7 @@ public class RegressionTest {
 
    @Test
    public void cml2jdx() {
-      RegressionSuite.run(SpectrumCommon.JDX_CML2JDX_DIR, "cml", "jdx",
+      RegressionSuite.run(SpectrumModule.JDX_CML2JDX_DIR, "cml", "jdx",
                             new CMLSpect2JDXConverter());
    }
 

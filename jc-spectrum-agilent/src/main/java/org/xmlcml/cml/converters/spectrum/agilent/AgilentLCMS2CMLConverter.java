@@ -13,7 +13,7 @@ import org.xmlcml.cml.base.CC;
 import org.xmlcml.cml.converters.AbstractConverter;
 import org.xmlcml.cml.converters.MimeType;
 import org.xmlcml.cml.converters.cml.CMLCommon;
-import org.xmlcml.cml.converters.spectrum.SpectrumCommon;
+import org.xmlcml.cml.converters.spectrum.SpectrumModule;
 import org.xmlcml.cml.element.CMLArray;
 import org.xmlcml.cml.element.CMLCml;
 import org.xmlcml.cml.element.CMLPeak;
@@ -295,7 +295,7 @@ Saved	TRUE
 	}
 	
 	public MimeType getInputType() {
-		return SpectrumCommon.AGILENT_TYPE;
+		return SpectrumModule.AGILENT_TYPE;
 	}
 	
 	public MimeType getOutputType() {

@@ -18,22 +18,22 @@
         <dependency>
             <groupId>cml</groupId>
             <artifactId>jc-spectrum-agilent</artifactId>
+            <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>cml</groupId>
             <artifactId>jc-spectrum-bruker</artifactId>
+            <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>cml</groupId>
             <artifactId>jc-spectrum-jdx</artifactId>
+            <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>cml</groupId>
             <artifactId>jc-spectrum-oscar</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>cml</groupId>
-            <artifactId>jc-spectrum-svg</artifactId>
+            <version>${project.version}</version>
         </dependency>
     </dependencies>
 

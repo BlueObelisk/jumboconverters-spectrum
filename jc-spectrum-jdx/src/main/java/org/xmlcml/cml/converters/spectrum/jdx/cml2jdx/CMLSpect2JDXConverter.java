@@ -20,7 +20,7 @@ import org.xmlcml.cml.base.CMLConstants;
 import org.xmlcml.cml.converters.AbstractConverter;
 import org.xmlcml.cml.converters.MimeType;
 import org.xmlcml.cml.converters.cml.CMLCommon;
-import org.xmlcml.cml.converters.spectrum.SpectrumCommon;
+import org.xmlcml.cml.converters.spectrum.SpectrumModule;
 import org.xmlcml.cml.element.CMLArray;
 import org.xmlcml.cml.element.CMLCml;
 import org.xmlcml.cml.element.CMLSpectrum;
@@ -36,14 +36,6 @@ import org.xmlcml.cml.element.CMLYaxis;
 public class CMLSpect2JDXConverter extends AbstractConverter {
 	private static final Logger LOG = Logger.getLogger(CMLSpect2JDXConverter.class);
 	
-	public final static String[] typicalArgsForConverterCommand = {
-		"-sd", "src/test/resources/spectrum/jdxin",
-		"-odir", "../cmljdx",
-		"-is", "cml",
-		"-os", "jdx",
-		"-converter", "org.xmlcml.cml.converters.graphics.svg.CMLSpect2JDXConverter",
-	};
-    
 	/**
 	 * Converts a SVG object to CML.
 	 * 
@@ -94,7 +86,7 @@ Spectrum1D(IOrderedDataArray1D x, IDataArray1D y)
 	}
 	
 	public MimeType getOutputType() {
-		return SpectrumCommon.JDX_TYPE;
+		return SpectrumModule.JDX_TYPE;
 	}
 	
 	public String getDescription() {

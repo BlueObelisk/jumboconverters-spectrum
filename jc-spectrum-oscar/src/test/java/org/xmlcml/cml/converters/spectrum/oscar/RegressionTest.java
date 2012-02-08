@@ -5,7 +5,7 @@
 package org.xmlcml.cml.converters.spectrum.oscar;
 
 import org.junit.Test;
-import org.xmlcml.cml.converters.spectrum.SpectrumCommon;
+import org.xmlcml.cml.converters.spectrum.SpectrumModule;
 import org.xmlcml.cml.converters.testutils.RegressionSuite;
 
 /**
@@ -16,7 +16,7 @@ public class RegressionTest {
 
    @Test
    public void oscar2cml() {
-      RegressionSuite.run(SpectrumCommon.OSCAR_DIR, "xml", "cml",
+      RegressionSuite.run(SpectrumModule.OSCAR_DIR, "xml", "cml",
                             new OSCAR2CMLSpectConverter());
    }
 
