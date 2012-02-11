@@ -5,13 +5,20 @@
 
     <parent>
         <groupId>cml</groupId>
-        <artifactId>jumbo-converters</artifactId>
+        <artifactId>jumboconverters2-parent</artifactId>
         <version>0.3-SNAPSHOT</version>
     </parent>
 
     <artifactId>jc-spectrum</artifactId>
     <name>jc-spectrum</name>
 
+	<repositories>
+	  <repository>
+	    <id>ucc-repo</id>
+	    <url>http://maven.ch.cam.ac.uk/m2repo</url>
+	  </repository>
+	</repositories>
+	
     <dependencies>
        <dependency>
             <groupId>cml</groupId>
@@ -19,10 +26,10 @@
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.jcamp</groupId>
+            <groupId>jcamp</groupId>
             <artifactId>jcamp</artifactId>
+            <version>${jcamp.version}</version>
         </dependency>
-
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
