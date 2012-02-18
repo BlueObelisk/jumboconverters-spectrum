@@ -11,6 +11,7 @@
 
     <artifactId>jc-spectrum</artifactId>
     <name>jc-spectrum</name>
+    <packaging>pom</packaging>
 
 	<repositories>
 	  <repository>
