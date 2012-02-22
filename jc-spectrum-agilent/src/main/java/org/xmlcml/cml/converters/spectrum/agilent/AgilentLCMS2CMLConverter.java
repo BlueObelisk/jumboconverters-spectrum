@@ -10,10 +10,9 @@ import nu.xom.ParentNode;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.xmlcml.cml.base.CC;
-import org.xmlcml.cml.converters.AbstractConverter;
 import org.xmlcml.cml.converters.MimeType;
 import org.xmlcml.cml.converters.cml.CMLCommon;
-import org.xmlcml.cml.converters.spectrum.SpectrumModule;
+import org.xmlcml.cml.converters.spectrum.core.SpectrumConverter;
 import org.xmlcml.cml.element.CMLArray;
 import org.xmlcml.cml.element.CMLCml;
 import org.xmlcml.cml.element.CMLPeak;
@@ -23,12 +22,9 @@ import org.xmlcml.cml.element.CMLXaxis;
 import org.xmlcml.cml.element.CMLYaxis;
 import org.xmlcml.euclid.RealArray;
 
-public class AgilentLCMS2CMLConverter extends AbstractConverter {
+public class AgilentLCMS2CMLConverter extends SpectrumConverter {
 
 	private static final Logger LOG = Logger.getLogger(AgilentLCMS2CMLConverter.class);
-	private static final String REG_IN = "agilent-in";
-	private static final String REG_OUT = "agilent-cml";
-	private static final String REG_MESSAGE = "Agilent lab MS to CML";
 	static {
 		LOG.setLevel(Level.INFO);
 	};
@@ -295,7 +291,7 @@ Saved	TRUE
 	}
 	
 	public MimeType getInputType() {
-		return SpectrumModule.AGILENT_TYPE;
+		return AgilentModule.AGILENT_TYPE;
 	}
 	
 	public MimeType getOutputType() {
@@ -303,7 +299,7 @@ Saved	TRUE
 	}
 	
 	public String getDescription() {
-		return REG_MESSAGE;
+		return "Agilent lab MS to CML";
 	}
 
 }

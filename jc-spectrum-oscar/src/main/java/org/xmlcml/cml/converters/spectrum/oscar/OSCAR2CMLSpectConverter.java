@@ -4,17 +4,14 @@ import nu.xom.Element;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.xmlcml.cml.converters.AbstractConverter;
-import org.xmlcml.cml.converters.Converter;
 import org.xmlcml.cml.converters.MimeType;
 import org.xmlcml.cml.converters.cml.CMLCommon;
-import org.xmlcml.cml.converters.spectrum.SpectrumModule;
+import org.xmlcml.cml.converters.spectrum.core.SpectrumConverter;
 import org.xmlcml.cml.element.CMLCml;
 import org.xmlcml.cml.element.CMLSpectrum;
 import org.xmlcml.cml.element.CMLSpectrum.SpectrumType;
 
-public class OSCAR2CMLSpectConverter extends AbstractConverter implements
-		Converter {
+public class OSCAR2CMLSpectConverter extends SpectrumConverter {
 
 	private static final Logger LOG = Logger.getLogger(OSCAR2CMLSpectConverter.class);
 	static {
@@ -44,7 +41,7 @@ public class OSCAR2CMLSpectConverter extends AbstractConverter implements
 	}
 
 	public MimeType getInputType() {
-		return SpectrumModule.OSCAR_XML_TYPE;
+		return OSCARModule.OSCAR_XML_TYPE;
 	}
 	
 	public MimeType getOutputType() {

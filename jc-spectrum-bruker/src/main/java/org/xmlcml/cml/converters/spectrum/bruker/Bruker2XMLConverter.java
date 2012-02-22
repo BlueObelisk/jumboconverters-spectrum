@@ -6,16 +6,15 @@ import nu.xom.Element;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.xmlcml.cml.converters.AbstractConverter;
 import org.xmlcml.cml.converters.MimeType;
 import org.xmlcml.cml.converters.cml.CMLCommon;
-import org.xmlcml.cml.converters.spectrum.SpectrumModule;
+import org.xmlcml.cml.converters.spectrum.core.SpectrumConverter;
 import org.xmlcml.cml.converters.spectrum.jdx.jdx2cml.JDX2CMLParser;
 import org.xmlcml.cml.element.CMLCml;
 import org.xmlcml.cml.element.CMLSpectrum;
 import org.xmlcml.cml.element.CMLSpectrum.SpectrumType;
 
-public class Bruker2XMLConverter extends AbstractConverter {
+public class Bruker2XMLConverter extends SpectrumConverter {
 
 	private static final Logger LOG = Logger.getLogger(Bruker2XMLConverter.class);
 	static {
@@ -46,7 +45,7 @@ public class Bruker2XMLConverter extends AbstractConverter {
 	}
 
 	public MimeType getInputType() {
-		return SpectrumModule.BRUKER_JDX_TYPE;
+		return BrukerModule.BRUKER_TYPE;
 	}
 	
 	public MimeType getOutputType() {

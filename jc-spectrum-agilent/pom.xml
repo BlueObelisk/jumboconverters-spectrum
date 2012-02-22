@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>cml</groupId>
+        <groupId>org.xml-cml.jc</groupId>
         <artifactId>jc-spectrum</artifactId>
         <version>0.3-SNAPSHOT</version>
     </parent>
@@ -15,11 +15,10 @@
 
     <dependencies>
         <dependency>
-            <groupId>cml</groupId>
-            <artifactId>jc-spectrum</artifactId>
+            <groupId>${jc.groupId}</groupId>
+            <artifactId>jc-spectrum-core</artifactId>
             <version>${project.version}</version>
         </dependency>
-
     </dependencies>
 
 </project>

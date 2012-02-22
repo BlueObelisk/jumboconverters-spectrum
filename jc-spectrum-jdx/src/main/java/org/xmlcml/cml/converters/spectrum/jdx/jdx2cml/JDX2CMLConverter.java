@@ -10,7 +10,7 @@ import org.xmlcml.cml.converters.AbstractConverter;
 import org.xmlcml.cml.converters.Converter;
 import org.xmlcml.cml.converters.MimeType;
 import org.xmlcml.cml.converters.cml.CMLCommon;
-import org.xmlcml.cml.converters.spectrum.SpectrumModule;
+import org.xmlcml.cml.converters.spectrum.jdx.JDXModule;
 import org.xmlcml.cml.element.CMLCml;
 
 public class JDX2CMLConverter extends AbstractConverter implements
@@ -37,7 +37,7 @@ public class JDX2CMLConverter extends AbstractConverter implements
 	}
 
 	public MimeType getInputType() {
-		return SpectrumModule.JDX_TYPE;
+		return JDXModule.JDX_TYPE;
 	}
 	
 	public MimeType getOutputType() {

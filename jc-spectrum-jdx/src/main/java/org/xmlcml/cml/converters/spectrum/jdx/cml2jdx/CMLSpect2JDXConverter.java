@@ -17,10 +17,10 @@ import org.jcamp.units.DerivedUnit;
 import org.jcamp.units.Unit;
 import org.xmlcml.cml.base.CMLBuilder;
 import org.xmlcml.cml.base.CMLConstants;
-import org.xmlcml.cml.converters.AbstractConverter;
 import org.xmlcml.cml.converters.MimeType;
 import org.xmlcml.cml.converters.cml.CMLCommon;
-import org.xmlcml.cml.converters.spectrum.SpectrumModule;
+import org.xmlcml.cml.converters.spectrum.core.SpectrumConverter;
+import org.xmlcml.cml.converters.spectrum.jdx.JDXModule;
 import org.xmlcml.cml.element.CMLArray;
 import org.xmlcml.cml.element.CMLCml;
 import org.xmlcml.cml.element.CMLSpectrum;
@@ -33,7 +33,7 @@ import org.xmlcml.cml.element.CMLYaxis;
  * @author pm286
  *
  */
-public class CMLSpect2JDXConverter extends AbstractConverter {
+public class CMLSpect2JDXConverter extends SpectrumConverter {
 	private static final Logger LOG = Logger.getLogger(CMLSpect2JDXConverter.class);
 	
 	/**
@@ -86,7 +86,7 @@ Spectrum1D(IOrderedDataArray1D x, IDataArray1D y)
 	}
 	
 	public MimeType getOutputType() {
-		return SpectrumModule.JDX_TYPE;
+		return JDXModule.JDX_TYPE;
 	}
 	
 	public String getDescription() {

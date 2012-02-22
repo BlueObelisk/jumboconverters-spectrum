@@ -13,7 +13,8 @@ import org.jcamp.spectrum.Spectrum;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
-import org.xmlcml.cml.converters.spectrum.SpectrumModule;
+import org.xmlcml.cml.converters.spectrum.core.SpectrumModule;
+import org.xmlcml.cml.converters.spectrum.jdx.JDXModule;
 
 /**
  * copied from JCAMP distrib to make sure the library works
@@ -29,7 +30,7 @@ public class JCampTest {
     public void testSpinworks() throws Exception{
 
         StringBuffer fileData = new StringBuffer(1000);
-        File file = new File(SpectrumModule.JDX_JDX2CML_DIR+"/in/"+"spinworks.dx");
+        File file = new File(JDXModule.JDX_JDX2CML_DIR+"/in/"+"spinworks.dx");
         System.out.println(file.getAbsolutePath());
         BufferedReader reader = new BufferedReader(new FileReader(file));
         char[] buf = new char[1024];
@@ -53,8 +54,9 @@ public class JCampTest {
     }
 
 	@Test
+	   @Ignore
 	public void testClacetop() {
-		File clacetop = new File("src/test/resources/"+SpectrumModule.JDX_JDX2CML_DIR+"/in/clacetop.jdx");
+		File clacetop = new File("src/test/resources/"+JDXModule.JDX_JDX2CML_DIR+"/in/clacetop.jdx");
 		JDX2CMLConverter converter = new JDX2CMLConverter();
 		Element element = converter.convertToXML(clacetop);
 //		CMLUtil.debug(element, "NEW JCXML");
@@ -64,7 +66,7 @@ public class JCampTest {
     public void testMoreThan49Peaks() throws Exception{
 
         StringBuffer fileData = new StringBuffer(1000);
-        BufferedReader reader = new BufferedReader(new FileReader(SpectrumModule.JDX_JDX2CML_DIR+"/in/1567755.jdx"));
+        BufferedReader reader = new BufferedReader(new FileReader(JDXModule.JDX_JDX2CML_DIR+"/in/1567755.jdx"));
         char[] buf = new char[1024];
         int numRead=0;
         while((numRead=reader.read(buf)) != -1){

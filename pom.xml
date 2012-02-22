@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>cml</groupId>
+        <groupId>org.xml-cml.jc</groupId>
         <artifactId>jc-parent</artifactId>
         <version>0.3-SNAPSHOT</version>
     </parent>
@@ -20,9 +20,18 @@
 	  </repository>
 	</repositories>
 	
+    <modules>
+        <module>jc-spectrum-core</module>
+        <module>jc-spectrum-agilent</module>
+        <module>jc-spectrum-bruker</module>
+        <module>jc-spectrum-jdx</module>
+        <module>jc-spectrum-oscar</module>
+        <module>jc-spectrum-all</module>
+    </modules>
+    
     <dependencies>
        <dependency>
-            <groupId>cml</groupId>
+            <groupId>${jc.groupId}</groupId>
             <artifactId>jc-top-core</artifactId>
             <version>${project.version}</version>
         </dependency>
@@ -37,7 +46,7 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>cml</groupId>
+            <groupId>${jc.groupId}</groupId>
             <artifactId>jc-top-testutils</artifactId>
             <version>${project.version}</version>
             <scope>test</scope>

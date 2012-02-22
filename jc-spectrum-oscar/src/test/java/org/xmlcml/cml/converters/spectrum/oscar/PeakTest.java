@@ -7,7 +7,6 @@ import java.io.InputStream;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.xmlcml.cml.base.CMLBuilder;
-import org.xmlcml.cml.converters.spectrum.SpectrumModule;
 import org.xmlcml.cml.element.CMLPeak;
 import org.xmlcml.euclid.Util;
 
@@ -16,7 +15,7 @@ public class PeakTest {
 	@Test
 	@Ignore // BUG in load stream
 	public void propagateUnits() throws Exception {
-		String instreamName = SpectrumModule.OSCAR_DIR+"/ref/peakMissingCouplings.xml";
+		String instreamName = OSCARModule.OSCAR_DIR+"/ref/peakMissingCouplings.xml";
 		System.err.println(instreamName);
 //		InputStream in = ClassLoader.getSystemResourceAsStream(instreamName);
 		InputStream in = Util.getInputStreamFromResource(instreamName);
