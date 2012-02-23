@@ -3,10 +3,10 @@ package org.xmlcml.cml.converters.spectrum.jdx;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.xmlcml.cml.converters.AbstractConverterModule;
 import org.xmlcml.cml.converters.Converter;
 import org.xmlcml.cml.converters.MimeType;
 import org.xmlcml.cml.converters.MimeType.ObjectType;
-import org.xmlcml.cml.converters.registry.AbstractConverterModule;
 import org.xmlcml.cml.converters.spectrum.jdx.cml2jdx.CMLSpect2JDXConverter;
 import org.xmlcml.cml.converters.spectrum.jdx.jdx2cml.JDX2CMLConverter;
 

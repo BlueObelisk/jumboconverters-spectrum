@@ -27,6 +27,7 @@
         <module>jc-spectrum-jdx</module>
         <module>jc-spectrum-oscar</module>
         <module>jc-spectrum-all</module>
+        <module>jc-spectrum-test</module>
     </modules>
     
     <dependencies>
