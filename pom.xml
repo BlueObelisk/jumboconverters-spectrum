@@ -20,6 +20,13 @@
 	  </repository>
 	</repositories>
 	
+	<properties>
+		<jcamp.groupId>org.jcamp</jcamp.groupId>
+		<jcamp.artifactId>jcamp</jcamp.artifactId>
+		<jcamp.version>0.9.1</jcamp.version>
+	</properties>
+		
+	
     <modules>
         <module>jc-spectrum-core</module>
         <module>jc-spectrum-agilent</module>
@@ -27,20 +34,9 @@
         <module>jc-spectrum-jdx</module>
         <module>jc-spectrum-oscar</module>
         <module>jc-spectrum-all</module>
-        <module>jc-spectrum-test</module>
     </modules>
     
     <dependencies>
-       <dependency>
-            <groupId>${jc.groupId}</groupId>
-            <artifactId>jc-top-core</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.jcamp</groupId>
-            <artifactId>jcamp</artifactId>
-            <version>${jcamp.version}</version>
-        </dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>

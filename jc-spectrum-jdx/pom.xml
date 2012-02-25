@@ -20,6 +20,12 @@
             <version>${project.version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>${jcamp.groupId}</groupId>
+            <artifactId>${jcamp.artifactId}</artifactId>
+            <version>${jcamp.version}</version>
+        </dependency>
+
     </dependencies>
 
 </project>

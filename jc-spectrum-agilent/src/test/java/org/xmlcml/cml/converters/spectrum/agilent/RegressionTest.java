@@ -2,9 +2,10 @@ package org.xmlcml.cml.converters.spectrum.agilent;
 
 import org.junit.Ignore;
 
+
 import org.junit.Test;
 import org.xmlcml.cml.converters.spectrum.agilent.AgilentLCMS2CMLConverter;
-import org.xmlcml.cml.converters.testutils.RegressionSuite;
+import org.xmlcml.cml.converters.testutils.JumboConvertersRegressionSuite;
 
 /**
  *
@@ -15,7 +16,7 @@ public class RegressionTest {
    @Test
    @Ignore // FAIL
    public void agilent2cml() {
-      RegressionSuite.run(AgilentModule.AGILENT_DIR, "txt", "xml",
+      JumboConvertersRegressionSuite.run(AgilentModule.AGILENT_DIR, "txt", "xml",
                             new AgilentLCMS2CMLConverter());
    }
 

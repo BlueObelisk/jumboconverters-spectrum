@@ -6,8 +6,9 @@ package org.xmlcml.cml.converters.spectrum.bruker;
 
 import org.junit.Ignore;
 
+
 import org.junit.Test;
-import org.xmlcml.cml.converters.testutils.RegressionSuite;
+import org.xmlcml.cml.converters.testutils.JumboConvertersRegressionSuite;
 
 /**
  *
@@ -19,7 +20,7 @@ public class RegressionTest {
    @Ignore // changing case
    // TODO real bug
    public void bruker2cml() {
-      RegressionSuite.run(BrukerModule.BRUKER_DIR, "dx", "xml",
+	   JumboConvertersRegressionSuite.run(BrukerModule.BRUKER_DIR, "dx", "xml",
     		                              new Bruker2XMLConverter());
    }
    
